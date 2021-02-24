@@ -64,7 +64,7 @@ def test_levin_len(
             open(f'{file_name2}.txt', 'r') as f2, \
             open('result.json', 'w') as file_w:
         for i in range(1, count_str + 1):
-            print(i)
+            print(f'Запрос №{i}')
             result = get_levin_len(
                 f1.readline(i).strip(),
                 f2.readline(i).strip(),
@@ -78,10 +78,11 @@ if __name__ == '__main__':
     file_name1 = 'test1'
     file_name2 = 'test2'
     func = 'wiki'
-    cout_str = 400
+    cout_str = 200
+    max_len_str = 1000
 
-    generate_test_file(file_name1, cout_str, 1000)
-    generate_test_file(file_name2, cout_str, 1000)
+    generate_test_file(file_name1, cout_str, max_len_str)
+    generate_test_file(file_name2, cout_str, max_len_str)
 
     start_time = time.time()
 
@@ -92,4 +93,4 @@ if __name__ == '__main__':
         cout_str
     )
 
-    print(time.time() - start_time)
+    print(f'time: {time.time() - start_time}')
