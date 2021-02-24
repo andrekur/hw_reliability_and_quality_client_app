@@ -17,7 +17,7 @@ def generate_str(len_s: int) -> str:
 
         b = random.randint(
             ord('a'),
-            ord('b')
+            ord('z')
         )
 
         if bool(random.randint(0, 1)):
@@ -64,7 +64,7 @@ def test_levin_len(
             open(f'{file_name2}.txt', 'r') as f2, \
             open('result.json', 'w') as file_w:
         for i in range(1, count_str + 1):
-            print(f'Запрос №{i}')
+            print(f'request №{i}')
             result = get_levin_len(
                 f1.readline(i).strip(),
                 f2.readline(i).strip(),
