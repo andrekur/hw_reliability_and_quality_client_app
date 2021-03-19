@@ -2,7 +2,7 @@ import requests
 import random
 import time
 
-BASE_URL = 'http://gr-team.ru:778/api/v1/{method}/'
+BASE_URL = 'http://gr-team.ru/api/v1/{method}/'
 
 
 def generate_str(len_s: int) -> str:
